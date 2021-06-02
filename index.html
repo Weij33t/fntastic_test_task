@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/index.css" />
+    <link rel="stylesheet" href="src/icons.css" />
+
+    <title>Discord Clone</title>
+  </head>
+  <body>
+    <div class="toolbar">
+      <div class="logo">Discord</div>
+      <div class="toolbar-btns">
+        <div class="icon-window-minimize minimize-window"></div>
+        <div class="icon-window-maximize resize-window"></div>
+        <div class="icon-times close-window"></div>
+      </div>
+    </div>
+    <div class="app">
+      <div class="rooms-popup hide">
+        <div class="rooms-popup-inner">
+          <h2>Создать новый канал</h2>
+          <div class="rooms-popup-types">
+            <div class="rooms-popup-type selected">
+              <div class="custom-radio">
+                <div class="custom-radio-inner"></div>
+              </div>
+              Голосовой канал
+            </div>
+            <div class="rooms-popup-type">
+              <div class="custom-radio">
+                <div class="custom-radio-inner"></div>
+              </div>
+              Текстовый канал
+            </div>
+          </div>
+          <input type="text" placeholder="Название канала" />
+          <button>Создать канал</button>
+        </div>
+      </div>
+      <div class="servers">
+        <div class="items">
+          <div class="server">
+            <img src="./src/discord.png" alt="" />
+          </div>
+        </div>
+        <span class="icon-plus"></span>
+      </div>
+      <div class="rooms">
+        <div class="upper">
+          <div class="server-name">
+            <div>Server 1</div>
+            <span class="icon-chevron-down"></span>
+            <div class="server-dropdown hide">
+              <ul>
+                <li class="create-category">Создать новую категорию</li>
+              </ul>
+            </div>
+          </div>
+          <div class="room">
+            <div class="room-title">
+              <span class="icon-chevron-down"></span> Room 1
+              <span class="icon-plus"></span>
+            </div>
+            <div class="rooms-wrapper">
+              <div class="channels">
+                <div class="channel voice-channel">
+                  <div class="channel-title voice-channel-title">
+                    <span class="icon-volume-down"></span> Channel 1
+                  </div>
+                  <div class="channel-users">
+                    <div class="channel-user-name">
+                      <img src="src/discord.png" />&nbsp;BOT21
+                    </div>
+                    <div class="channel-user-name">
+                      <img src="src/discord.png" />&nbsp;Bot92
+                    </div>
+                  </div>
+                </div>
+                <div class="channel">
+                  <div class="channel-title">
+                    <span class="icon-sharp"></span> Channel 2
+                  </div>
+                </div>
+                <div class="channel">
+                  <div class="channel-title">
+                    <span class="icon-sharp"></span> Channel 3
+                  </div>
+                </div>
+                <div class="channel voice-channel">
+                  <div class="channel-title voice-channel-title">
+                    <span class="icon-volume-down"></span> Channel 4
+                  </div>
+                  <div class="channel-users">
+                    <div class="channel-user-name">
+                      <img src="src/discord.png" />&nbsp;BOT4412
+                    </div>
+                    <div class="channel-user-name">
+                      <img src="src/discord.png" />&nbsp;Bot12
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="room">
+            <div class="room-title">
+              <span class="icon-chevron-down"></span> Room 2<span
+                class="icon-plus"
+              ></span>
+            </div>
+            <div class="rooms-wrapper">
+              <div class="channels">
+                <div class="channel voice-channel">
+                  <div class="channel-title voice-channel-title">
+                    <span class="icon-volume-down"></span> Channel 4
+                  </div>
+                  <div class="channel-users">
+                    <div class="channel-user-name">
+                      <img src="src/discord.png" />&nbsp;BOT552
+                    </div>
+                    <div class="channel-user-name">
+                      <img src="src/discord.png" />&nbsp;Bot18
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="leave-channel hide">
+            <div><span class="icon-wifi"></span> Подключение установлено</div>
+            <span class="leave-button">Нажмите, чтобы покинуть канал</span>
+          </div>
+          <div class="rooms-user">
+            <div>
+              <div class="user-avatar">
+                <span class="user-status"></span>
+              </div>
+              <div class="user-info">
+                <div class="user-name">Weij33t</div>
+                <div class="user-id">#2021</div>
+              </div>
+            </div>
+
+            <div class="user-settings">
+              <div class="icon-microphone"></div>
+              <div class="icon-headphones"></div>
+              <div class="icon-gear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chat">
+        <div class="chat-topbar">
+          <div class="chat-channel-name">
+            <span class="icon-sharp"></span>&nbsp; Channel 1
+          </div>
+          <div class="top-bar-btns">
+            <div class="icon-bell-o notification"></div>
+            <div class="pinned-messages-overlay"></div>
+            <div class="pinned-messages">
+              <div class="content">
+                <div class="pinned-message-title">Закреплённое сообщение</div>
+                <div></div>
+              </div>
+            </div>
+            <div class="icon-users users"></div>
+          </div>
+        </div>
+
+        <div class="chat-content">
+          <div class="chat-messages">
+            <div class="chat-message message">
+              <div class="message-inner">
+                <div class="message-avatar"></div>
+                <div class="message-info">
+                  <span class="message-author">Weij33t</span>
+                  <span class="message-time"
+                    >01/06/2021
+                    <span class="icon-gear">
+                      <ul>
+                        <li class="pin-message">Pin</li>
+                        <li class="edit-message">Edit</li>
+                        <li class="delete-message">Delete</li>
+                      </ul></span
+                    ></span
+                  >
+                  <div class="message-content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+                    exercitationem fugiat consequatur facilis suscipit magni.
+                    Sapiente et rem laudantium nam consequuntur? Tempora impedit
+                    eaque asperiores quod laudantium. Exercitationem, magnam
+                    incidunt quas blanditiis nostrum, minus dolores delectus
+                    tempora error eius possimus fugit cupiditate sequi explicabo
+                    quam, neque rerum reprehenderit ipsum sint!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-field">
+          <div class="icon-plus-circle chat-add"></div>
+          <div
+            contenteditable="true"
+            type="text"
+            class="chat-input textarea"
+            placeholder="message #room1"
+          ></div>
+          <div class="icon-gift chat-gift"></div>
+          <!-- <div class="chat-gif">Gif</div>   -->
+          <div class="icon-smile-o chat-smiles"></div>
+        </div>
+      </div>
+      <div class="users-list">
+        <div class="users-list-topbar">
+          <div class="search">
+            <input type="text" placeholder="Search" />
+            <button class="icon-search"></button>
+          </div>
+        </div>
+        <div class="groups">
+          <div class="group">
+            <div class="group-name">
+              B.O.T. - <span class="users-quantity">5</span>
+            </div>
+            <div class="users">
+              <div class="user-hidden-overlay hide"></div>
+              <div class="user">
+                <div class="user-hidden hide">
+                  <div class="user-inner">
+                    <div class="user-avatar"></div>
+                    <div class="">
+                      <h2>Weij33t</h2>
+                      <h3>#2021</h3>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="user-inner">
+                    <p class="user-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste esse illo explicabo nihil reiciendis, minus
+                    </p>
+                    <span class="user-playing"
+                      >Играет в <span>The Day Before</span></span
+                    >
+                    <img src="./src/thedaybefor.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="user-avatar"></div>
+                <div>
+                  <div class="user-name">Weij33t</div>
+                  <div class="user-status">Playing The Day Before</div>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-hidden hide">
+                  <div class="user-inner">
+                    <div class="user-avatar"></div>
+                    <div class="">
+                      <h2>Weij33t</h2>
+                      <h3>#2021</h3>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="user-inner">
+                    <p class="user-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste esse illo explicabo nihil reiciendis, minus
+                    </p>
+                    <span class="user-playing"
+                      >Играет в <span>The Day Before</span></span
+                    >
+                    <img src="./src/thedaybefor.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="user-avatar"></div>
+                <div>
+                  <div class="user-name">Weij33t</div>
+                  <div class="user-status">Playing The Day Before</div>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-hidden hide">
+                  <div class="user-inner">
+                    <div class="user-avatar"></div>
+                    <div class="">
+                      <h2>Weij33t</h2>
+                      <h3>#2021</h3>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="user-inner">
+                    <p class="user-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste esse illo explicabo nihil reiciendis, minus
+                    </p>
+                    <span class="user-playing"
+                      >Играет в <span>The Day Before</span></span
+                    >
+                    <img src="./src/thedaybefor.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="user-avatar"></div>
+                <div>
+                  <div class="user-name">Weij33t</div>
+                  <div class="user-status">Playing The Day Before</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="group">
+            <div class="group-name">
+              Online - <span class="users-quantity">5</span>
+            </div>
+            <div class="users">
+              <div class="user">
+                <div class="user-hidden hide">
+                  <div class="user-inner">
+                    <div class="user-avatar"></div>
+                    <div class="">
+                      <h2>Weij33t</h2>
+                      <h3>#2021</h3>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="user-inner">
+                    <p class="user-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste esse illo explicabo nihil reiciendis, minus
+                    </p>
+                    <span class="user-playing"
+                      >Играет в <span>The Day Before</span></span
+                    >
+                    <img src="./src/thedaybefor.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="user-avatar"></div>
+                <div>
+                  <div class="user-name">Weij33t</div>
+                  <div class="user-status">Playing The Day Before</div>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-hidden hide">
+                  <div class="user-inner">
+                    <div class="user-avatar"></div>
+                    <div class="">
+                      <h2>Weij33t</h2>
+                      <h3>#2021</h3>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="user-inner">
+                    <p class="user-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste esse illo explicabo nihil reiciendis, minus
+                    </p>
+                    <span class="user-playing"
+                      >Играет в <span>The Day Before</span></span
+                    >
+                    <img src="./src/thedaybefor.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="user-avatar"></div>
+                <div>
+                  <div class="user-name">Weij33t</div>
+                  <div class="user-status">Playing The Day Before</div>
+                </div>
+              </div>
+              <div class="user">
+                <div class="user-hidden hide">
+                  <div class="user-inner">
+                    <div class="user-avatar"></div>
+                    <div class="">
+                      <h2>Weij33t</h2>
+                      <h3>#2021</h3>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="user-inner">
+                    <p class="user-desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Iste esse illo explicabo nihil reiciendis, minus
+                    </p>
+                    <span class="user-playing"
+                      >Играет в <span>The Day Before</span></span
+                    >
+                    <img src="./src/thedaybefor.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="user-avatar"></div>
+                <div>
+                  <div class="user-name">Weij33t</div>
+                  <div class="user-status">Playing The Day Before</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./renderer.js"></script>
+    <script src="./src/toolbar.js"></script>
+    <script src="./src/servers.js"></script>
+    <script src="./src/rooms.js"></script>
+    <script src="./src/chat.js"></script>
+    <script src="./src/users.js"></script>
+  </body>
+</html>
