@@ -32,6 +32,7 @@ createCategory.addEventListener('click', () => {
   category.appendChild(roomsWrapper)
   category.classList.add('room')
   document.querySelector('.rooms .upper').appendChild(category)
+  // Добавляем слушатели для созданных элементов
   addRoomTitleHandlers()
   createChannelHandlers()
 })
