@@ -81,7 +81,6 @@ leaveChannel.addEventListener('click', () => {
 
 const popup = document.querySelector('.rooms-popup')
 popup.addEventListener('click', (e) => {
-  console.log(e.target)
   if (e.target.classList.contains('rooms-popup')) {
     popup.classList.add('hide')
   }
