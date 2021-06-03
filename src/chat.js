@@ -9,6 +9,7 @@ chatField.addEventListener('keypress', (e) => {
   ) {
     e.preventDefault()
     pushMessage(e.target.innerHTML)
+    // Добавляем слушатели для созданных элементов
     addListeners()
     e.target.innerHTML = ''
   } else if (
